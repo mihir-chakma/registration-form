@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+
+    <!-- form -->
+    <form action="https://register-demo.freecodecamp.org">
+
+        <!-- first fieldset  -->
+        <fieldset>
+            <label for="first-name">Enter your First Name: 
+                <input id="first-name" name="first-name" type="text" required >
+            </label>
+            <label for="last-name">Enter your First Name: 
+                <input id="last-name" name="last-name" type="text" required >
+            </label>
+            <label for="email">Enter your Email: 
+                <input id="email" name="email" type="email" required >
+            </label>
+            <label for="new-password">Create a New Password: 
+                <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required >
+            </label>
+        </fieldset>
+        
+        <!-- second fieldset -->
+        <fieldset>
+            <label for="personal-account">
+                <input class="inline" id="personal-account" name="account-type" type="radio" name="account-type"> Personal Account
+            </label>
+            <label for="business-account">
+                <input class="inline" id="business-account" name="account-type" type="radio" name="account-type"> Business Account
+            </label>
+            <label for="terms-and-conditions">
+                <input class="inline" id="terms-and-conditions" type="checkbox" name="terms-and-conditions" required > I accept the <a class="underline" href="https://www.freecodecamp.org/news/terms-of-service" target="_blank">terms and conditions</a> 
+            </label>
+        </fieldset>
+        
+        <!-- third filedset -->
+        <fieldset>
+            <label for="profile-picture">Upload a profile picture: 
+                <input id="profile-picture" type="file" name="file">
+            </label>
+            <label for="age">Input your age (years): 
+                <input id="age" type="number" min="13" max="120" name="age">
+            </label>
+            <label for="referrer">How did you hear about us? 
+                <select name="referrer" id="referrer">
+                    <option value="">(Select one)</option>
+                    <option value="1">FreeCodeCamp News</option>
+                    <option value="2">FreeCodeCamp Youtube Channel</option>
+                    <option value="3">FreeCodeCamp Forum</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+            <label for="bio">Provide a bio: 
+                <textarea id="bio" name="bio" cols="30" rows="3" placeholder="I like coding on the beach..."></textarea>
+            </label>
+        </fieldset>
+        
+        <!-- submit button -->
+        <input type="submit" value="Submit">
+    </form> <!-- end form-->
+</body>
+</html>
